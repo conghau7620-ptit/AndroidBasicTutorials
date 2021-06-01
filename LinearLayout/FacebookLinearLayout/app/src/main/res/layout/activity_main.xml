@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="50dp"
+    android:weightSum="11"
+    android:background="#E0E5E8"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@+id/imgViewLogo"
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:src="@drawable/fb_logo"/>
+
+    <TextView
+        android:id="@+id/tvInstruction"
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="Hãy đăng nhập vào tài khoản Facebook của bạn để kết nối với FSDKSamples"
+        android:textSize="25sp"
+        android:textColor="#9DA8B1"/>
+
+    <EditText
+        android:id="@+id/edtAccount"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#FAFAF7"
+        android:hint="Email hoặc số điện thoại"
+        android:textSize="25sp"
+        android:paddingLeft="10dp"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/edtPassword"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:background="#FAFAF7"
+        android:hint="Mật khẩu Facebook"
+        android:textSize="25sp"
+        android:paddingLeft="10dp"
+        android:inputType="textPassword"/>
+
+    <Button
+        android:layout_marginTop="5dp"
+        android:id="@+id/btnLogIn"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#3C54D6"
+        android:text="Đăng nhập"
+        android:textAllCaps="false"
+        android:textSize="25sp"
+        android:textColor="#FAFAF7"/>
+
+    <Button
+        android:id="@+id/btnSignUp"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:text="Tạo tài khoản"
+        android:textSize="25sp"
+        android:textAllCaps="false"
+        android:textColor="#3C54D6"
+        android:layout_marginTop="5dp"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_weight="1"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:text="Quên mật khẩu?"
+            android:textSize="15sp"
+            android:textColor="#9DA8B1"/>
+
+        <Button
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:text="Trung tâm trợ giúp"
+            android:textSize="15sp"
+            android:textColor="#9DA8B1"/>
+    </LinearLayout>
+
+</LinearLayout>
