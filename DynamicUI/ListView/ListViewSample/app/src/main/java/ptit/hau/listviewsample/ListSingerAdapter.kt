@@ -7,28 +7,10 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 
-class ListSingerAdapter(private  val context: Context, private val listSinger : MutableList<Singer>)
-    : BaseAdapter(){
-
-
-    override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-        var view = if (convertView!=null) convertView
-            else LayoutInflater.from(context).inflate(R.layout.list_item,parent,false)
-
-        var imgView : ImageView = view.findViewById(R.id.imgView)
-        var tvName : TextView = view.findViewById(R.id.tvName)
-        var tvBand : TextView = view.findViewById(R.id.tvBand)
-
-        imgView.setImageResource(listSinger[position].img)
-        tvName.setText(listSinger[position].name)
-        tvBand.setText(listSinger[position].band)
-
-
-
-        return view
-    }
-
+class ListSingerAdapter(val context: Context, val listSinger : MutableList<Singer>)
+    :BaseAdapter(){
     override fun getCount(): Int {
         return listSinger.size
     }
@@ -39,5 +21,22 @@ class ListSingerAdapter(private  val context: Context, private val listSinger : 
 
     override fun getItemId(position: Int): Long {
         return listSinger[position].id.toLong()
+    }
+
+    override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
+        val view = convertView ?: LayoutInflater.from(context).inflate(
+                        R.layout.list_item, parent, false)
+
+        view.let {
+            val tvName : TextView = view.findViewById(R.id.tvName)
+            val tvBand : TextView = view.findViewById(R.id.tvBand)
+            val imgSinger : ImageView = view.findViewById(R.id.imgSinger)
+
+            tvName.text = listSinger[position].name
+            tvBand.text = listSinger[position].band
+            imgSinger.setImageResource(listSinger[position].avatar)
+        }
+
+        return view!!
     }
 }

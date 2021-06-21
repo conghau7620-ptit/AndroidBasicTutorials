@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:weightSum="2">
+
+    <ImageView
+        android:id="@+id/imgSinger2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:src="@drawable/winter"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="30dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="Name:"
+                android:layout_weight="2"/>
+
+            <EditText
+                android:id="@+id/edtName2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="abc"
+                android:textSize="20sp"
+                android:enabled="false"
+                android:layout_weight="8"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="Band:"
+                android:layout_weight="2"/>
+
+            <EditText
+                android:id="@+id/edtBand2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="abc"
+                android:textSize="20sp"
+                android:enabled="false"
+                android:layout_weight="8"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="Birthday:"
+                android:layout_weight="2"/>
+
+            <EditText
+                android:id="@+id/edtBirthday2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="abc"
+                android:textSize="20sp"
+                android:enabled="false"
+                android:layout_weight="8"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:background="@color/colorAccent"
+            android:text="Edit"
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            android:adjustViewBounds="true"
+            android:layout_marginTop="10dp"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

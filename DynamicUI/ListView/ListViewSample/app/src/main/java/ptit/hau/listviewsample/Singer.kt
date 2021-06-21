@@ -1,5 +1,9 @@
 package ptit.hau.listviewsample
 
-class Singer(val id: Int,val name: String, val band: String, val img: Int) {
+import java.io.Serializable
+import java.util.*
+
+class Singer (val id: Int, var name: String, var band: String, val birthDay : Date?,
+              val avatar: Int){
 
 }
