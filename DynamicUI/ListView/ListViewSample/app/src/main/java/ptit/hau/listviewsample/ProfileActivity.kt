@@ -41,7 +41,6 @@ class ProfileActivity : AppCompatActivity(){
                     singer.name = edtName2.text.toString()
                     singer.band = edtBand2.text.toString()
                     MainActivity.listSinger[pos] = singer
-                    Log.d("abc",singer.name + "-" + MainActivity.listSinger[pos].name)
 
                 }
             }

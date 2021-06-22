@@ -1,14 +1,15 @@
-package ptit.hau.listviewsample
+package ptit.hau.gridviewsample
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+import android.view.View
+import android.widget.AdapterView
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity(){
+class MainActivity : AppCompatActivity() {
 
-    companion object { var listSinger : MutableList<Singer> = mutableListOf<Singer>(
+    companion object { var listSinger = mutableListOf<Singer>(
         Singer(1,"Yoon Du Jun", "Highlight", null, R.drawable.dujun),
         Singer(2,"Yang Yoseob", "Highlight", null, R.drawable.yoseob),
         Singer(3,"Lee Gikwang", "Highlight", null, R.drawable.gikwang),
@@ -20,22 +21,21 @@ class MainActivity : AppCompatActivity(){
         Singer(9,"Yerin","Solo", null, R.drawable.yerin),
         Singer(10,"Joy","Red Velvet", null, R.drawable.joy),
         Singer(11, "Winter", "Aespa", null, R.drawable.winter)
-    ) }
+    )}
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val listSingerAdapter = ListSingerAdapter(this,listSinger)
-        listView.adapter = listSingerAdapter
+        val singerAdapter = SingerAdapter(this,listSinger)
+        gridView.adapter = singerAdapter
 
-        listView.setOnItemClickListener { parent, view, position, id ->
+        gridView.setOnItemClickListener { parent, view, position, id ->
             val intent = Intent(this,ProfileActivity::class.java).apply {
                 putExtra("pos",position)
             }
             startActivity(intent)
-
-            Log.d("abc",listSinger[position].name)
         }
+
     }
 }
