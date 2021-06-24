@@ -20,13 +20,17 @@ class MainActivity : AppCompatActivity(){
         Singer(9,"Yerin","Solo", null, R.drawable.yerin),
         Singer(10,"Joy","Red Velvet", null, R.drawable.joy),
         Singer(11, "Winter", "Aespa", null, R.drawable.winter)
-    ) }
+    )
+        var listSingerAdapter : ListSingerAdapter? = null
+    }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val listSingerAdapter = ListSingerAdapter(this,listSinger)
+
+        listSingerAdapter = ListSingerAdapter(this,listSinger)
         listView.adapter = listSingerAdapter
 
         listView.setOnItemClickListener { parent, view, position, id ->

@@ -41,6 +41,7 @@ class ProfileActivity : AppCompatActivity(){
                     singer.name = edtName2.text.toString()
                     singer.band = edtBand2.text.toString()
                     MainActivity.listSinger[pos] = singer
+                    MainActivity.listSingerAdapter!!.notifyDataSetChanged()
 
                 }
             }
