@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center">
+
+    <ImageButton
+        android:id="@+id/btnChrome"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/chrome_icon"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:layout_margin="10dp"/>
+
+    <ImageButton
+        android:id="@+id/btnMessage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/message_icon"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:layout_margin="10dp"/>
+
+    <ImageButton
+        android:id="@+id/btnCall"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/call_icon"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:layout_margin="10dp"/>
+
+    <ImageButton
+        android:id="@+id/btnCamera"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/camera_icon"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:layout_margin="10dp"/>
+
+
+</LinearLayout>
