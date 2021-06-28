@@ -39,4 +39,12 @@ class SecondActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 
+    override fun onBackPressed() {
+        count--
+        var reIntent = Intent()
+        reIntent.putExtra("newNumber",count)
+        setResult(RESULT_OK, reIntent)
+        finish()
+    }
+
 }
