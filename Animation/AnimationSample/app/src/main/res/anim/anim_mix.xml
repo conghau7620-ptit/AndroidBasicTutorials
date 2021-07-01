@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillAfter="true">
+
+    <alpha android:fromAlpha="1.0"
+        android:toAlpha="0.1"
+        android:repeatCount="1"
+        android:repeatMode="reverse"
+        android:duration="500"/>
+
+    <translate android:fromXDelta="0"
+        android:toXDelta="400"
+        android:duration="1000"/>
+
+    <rotate android:startOffset="1000"
+        android:fromDegrees="0"
+        android:toDegrees="360"
+        android:pivotX="200%"
+        android:pivotY="50%"
+        android:duration="1000"/>
+
+    <translate android:startOffset="2000"
+        android:fromXDelta="0"
+        android:toXDelta="-200"
+        android:fromYDelta="0"
+        android:toYDelta="400"
+        android:duration="1000"/>
+
+    <rotate android:startOffset="3000"
+        android:fromDegrees="0"
+        android:toDegrees="-360"
+        android:repeatCount="2"
+        android:pivotX="130%"
+        android:pivotY="130%"
+        android:duration="1000"/>
+
+    <scale android:startOffset="4000"
+        android:fromXScale="1"
+        android:toXScale="3"
+        android:fromYScale="1"
+        android:toYScale="3"
+        android:repeatCount="1"
+        android:pivotX="130%"
+        android:pivotY="130%"
+        android:repeatMode="reverse"
+        android:duration="1000"/>
+
+    <translate android:startOffset="10000"
+        android:fromXDelta="0"
+        android:toXDelta="-200"
+        android:fromYDelta="0"
+        android:toYDelta="-400"
+        android:duration="1000"/>
+
+</set>
