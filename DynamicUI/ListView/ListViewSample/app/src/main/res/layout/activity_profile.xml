@@ -96,17 +96,6 @@
 
         </LinearLayout>
 
-        <Button
-            android:id="@+id/btnEdit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center"
-            android:background="@color/colorAccent"
-            android:text="Edit"
-            android:textSize="20sp"
-            android:textAllCaps="false"
-            android:adjustViewBounds="true"
-            android:layout_marginTop="10dp"/>
 
     </LinearLayout>
 

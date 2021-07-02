@@ -21,7 +21,7 @@ class SingerAdapter (
         var tvName : TextView = view.findViewById(R.id.tvName)
         var tvBand : TextView = view.findViewById(R.id.tvBand)
 
-        fun binData(singer: Singer) {
+        fun bindData(singer: Singer) {
             imgView.setImageResource(singer.avatar)
             tvName.setText(singer.name)
             tvBand.setText(singer.band)
@@ -39,7 +39,7 @@ class SingerAdapter (
     }
 
     override fun onBindViewHolder(holder: GameHolder, position: Int) {
-        holder.binData(listSinger[position])
+        holder.bindData(listSinger[position])
 
         holder.itemView.setOnClickListener {
             listener.onClick(listSinger[position],position)

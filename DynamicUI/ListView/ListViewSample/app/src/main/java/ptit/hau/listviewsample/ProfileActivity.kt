@@ -14,7 +14,6 @@ import java.util.*
 
 class ProfileActivity : AppCompatActivity(){
 
-    var flag = false
     var date = Calendar.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,48 +28,6 @@ class ProfileActivity : AppCompatActivity(){
         edtBand2.setText(singer.band)
         val dateFormat = SimpleDateFormat("dd/MM/yyyy")
         edtBirthday2.setText(dateFormat.format(date.time))
-        edtBirthday2.setOnClickListener(object: View.OnClickListener{
-            override fun onClick(v: View?) {
-                pickDate()
-            }
-        })
 
-        btnEdit.setOnClickListener(object : View.OnClickListener {
-            override fun onClick(v: View?) {
-                if (!flag) {
-                    edtName2.isEnabled = true
-                    edtBand2.isEnabled = true
-                    edtBirthday2.isEnabled = true
-                    btnEdit.setText("Save")
-                    flag = true
-                }
-                else {
-                    edtName2.isEnabled = false
-                    edtBand2.isEnabled = false
-                    edtBirthday2.isEnabled = false
-                    btnEdit.setText("Edit")
-                    flag = false
-
-                    singer.name = edtName2.text.toString()
-                    singer.band = edtBand2.text.toString()
-                    singer.birthDay = date
-
-                    MainActivity.listSinger[pos] = singer
-                    MainActivity.listSingerAdapter!!.notifyDataSetChanged()
-
-                }
-            }
-        })
-
-    }
-
-    fun pickDate() {
-        val datePickerDialog = DatePickerDialog(this, DatePickerDialog.OnDateSetListener {
-                view, year, month, day ->
-                    val dateFormat = SimpleDateFormat("dd/MM/yyyy")
-                    date.set(year,month,day)
-                    edtBirthday2.setText(dateFormat.format(date.time))
-        },date.get(Calendar.YEAR), date.get(Calendar.MONTH), date.get(Calendar.DATE))
-        datePickerDialog.show()
     }
 }

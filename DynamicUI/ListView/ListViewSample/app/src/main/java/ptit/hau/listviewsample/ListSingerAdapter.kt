@@ -4,6 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.TextView
@@ -36,6 +37,9 @@ class ListSingerAdapter(val context: Context, val listSinger : MutableList<Singe
             tvBand.text = listSinger[position].band
             imgSinger.setImageResource(listSinger[position].avatar)
         }
+
+        val animScale = AnimationUtils.loadAnimation(context,R.anim.anim_scale)
+        view.startAnimation(animScale)
 
         return view!!
     }

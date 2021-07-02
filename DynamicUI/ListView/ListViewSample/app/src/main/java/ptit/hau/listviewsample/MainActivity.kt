@@ -38,8 +38,6 @@ class MainActivity : AppCompatActivity(){
                 putExtra("pos",position)
             }
             startActivity(intent)
-
-            Log.d("abc",listSinger[position].name)
         }
     }
 }
