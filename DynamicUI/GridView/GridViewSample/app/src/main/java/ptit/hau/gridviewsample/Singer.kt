@@ -1,7 +1,7 @@
-package ptit.hau.gridviewsample
+    package ptit.hau.gridviewsample
 
-import java.util.*
+    import java.util.*
 
-class Singer (val id: Int, var name: String, var band: String, val birthDay : Date?,
-              val avatar: Int) {
-}
+    class Singer (val id: Int, var name: String, var band: String, val birthDay : Date?,
+                  val avatar: Int) {
+    }
