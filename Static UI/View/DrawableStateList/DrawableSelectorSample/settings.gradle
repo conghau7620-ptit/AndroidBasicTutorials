@@ -1,0 +1,2 @@
+rootProject.name='Drawable Selector Sample'
+include ':app'
