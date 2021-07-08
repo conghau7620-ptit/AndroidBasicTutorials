@@ -22,7 +22,7 @@ Android Basic
   |            |---Map
   |      |---Class and objects
   |            |---Classes
-  |            |---Interitance
+  |            |---Inheritance
   |            |---Properties
   |            |---Interfaces
   |            |---Conditions
