@@ -53,11 +53,11 @@ Android Basic
   |     |---Grid View
   |     |---Recycler View
   |
-  |---Activity/
+  |---Activity
   |
-  |---Shared Preferences/
+  |---Shared Preferences
   |
-  |---Animation/
+  |---Animation
   |
-  |---Async Task/
+  |---Async Task
 ```
