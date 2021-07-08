@@ -1,7 +1,7 @@
 # Android Basic Tutorials
 Android Basic Tutorials & Samples <br />
 Full Tutorials here: https://www.notion.so/Android-8181b3de7dfd45b184f9846a83f1c836 <br />
-###Structure:
+### Structure:
 ```
 Android Basic  
   |---Kotlin Basic
